@@ -12,6 +12,8 @@ public class TestSpring {
 
         musicPlayer.playMusic();
 
+        System.out.println("Name: " + musicPlayer.getName() + ", Volume: " + musicPlayer.getVolume());
+
         context.close();
     }
 }
