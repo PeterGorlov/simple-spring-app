@@ -1,6 +1,10 @@
 package ua.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MusicPlayer {
+    List<Music> musicList = new ArrayList<>();
     private Music music;
 
     private String name;
@@ -10,7 +14,8 @@ public class MusicPlayer {
         this.music = music;
     }
 
-    public MusicPlayer(){}
+    public MusicPlayer() {
+    }
 
     public void setMusic(Music music) {
         this.music = music;
@@ -32,7 +37,17 @@ public class MusicPlayer {
         this.volume = volume;
     }
 
+    public List<Music> getMusicList() {
+        return musicList;
+    }
+
+    public void setMusicList(List<Music> musicList) {
+        this.musicList = musicList;
+    }
+
     public void playMusic() {
-        System.out.println("Play : " + music.getSong());
+        for (Music music : musicList) {
+            System.out.println("Play Song : " + music.getSong());
+        }
     }
 }
