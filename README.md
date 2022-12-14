@@ -8,3 +8,4 @@
 ### Lesson7 Annotations
 ### Lesson8 Annotations DI
 ### Lesson9 Annotations @Scope,@Value,@PostConstruct,@PreDestroy
+### Lesson10 Spring Configuration Java Class
