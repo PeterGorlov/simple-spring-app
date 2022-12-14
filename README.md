@@ -4,3 +4,4 @@
 ### Lesson4 DI (Part 2)
 ### HomeWork1
 ### Lesson5 Scope
+### Lesson6 init,destroy,factory-method

@@ -18,7 +18,10 @@
     </bean>
 
     <bean id="musicBean3"
-          class="ua.example.ClassicalMusic">
+          class="ua.example.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          factory-method="getClassicalMusic">
     </bean>
 
     <bean id="musicPlayerBean"
