@@ -1,8 +1,11 @@
 package ua.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
-
+@Component
 public class MusicPlayer {
     List<Music> musicList = new ArrayList<>();
     private Music music;
@@ -41,6 +44,7 @@ public class MusicPlayer {
         return musicList;
     }
 
+    @Autowired
     public void setMusicList(List<Music> musicList) {
         this.musicList = musicList;
     }
