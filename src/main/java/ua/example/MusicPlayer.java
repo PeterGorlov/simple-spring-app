@@ -1,16 +1,21 @@
 package ua.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Component
+@Scope("singleton")
 public class MusicPlayer {
     List<Music> musicList = new ArrayList<>();
     private Music music;
-
+    @Value("Some sound")
     private String name;
+    @Value("10")
     private int volume;
 
     public MusicPlayer(Music music) {
@@ -54,7 +59,8 @@ public class MusicPlayer {
             System.out.println("Play song : " + music.getSong());
         } else {
             for (Music music : musicList) {
-                System.out.println("Play Song : " + music.getSong());
+                System.out.println("Play Song : " + music.getSong() +
+                        " : " + "Name: " + name + " Volume: " + volume);
             }
         }
     }

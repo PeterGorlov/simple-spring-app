@@ -2,6 +2,9 @@ package ua.example;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
 public class ClassicalMusic implements Music {
     private ClassicalMusic() {
@@ -11,10 +14,12 @@ public class ClassicalMusic implements Music {
         return new ClassicalMusic();
     }
 
+    @PostConstruct
     public void doMyInit() {
         System.out.println("DoMyInit");
     }
 
+    @PreDestroy
     public void doMyDestroy() {
         System.out.println("doMyDestroy");
     }
